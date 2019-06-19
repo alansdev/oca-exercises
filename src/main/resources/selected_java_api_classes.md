@@ -12,6 +12,11 @@
 - Trzeba znać różnicę pomiędzy Stringiem oraz StringBuilder i StringBuffer (ta ostatnia nie obowiązuje na egzaminie)
 - Trzeba umieć używać metody: append(), insert(), delete(), deleteCharAt(), trimToSize(), replace(), subSequence()
 
+# ArrayList
+- Jedyna kolekcja obowiązująca na egzaminie OCA
+- Domyślne capacity to 10
+
+
 # Dates
 - Trzeba umieć utworzyć obirkty LocalDate, LocalDateTime - nie ma konstruktora, tylko statyczne metody
 - Trzeba wiedzieć, że klasy są immutable - ich manipulacja powoduje utworzenie nowego obiektu - częsty temat na egzaminie
