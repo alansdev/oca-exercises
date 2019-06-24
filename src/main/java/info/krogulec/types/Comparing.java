@@ -17,8 +17,9 @@ public class Comparing {
         System.out.println(i3 == i4);
         System.out.println(i3.equals(i4));
 
-        Integer i5 = new Integer(200);
-        Integer i6 = new Integer(200);
+        //autoboxing (od -128 do 127 wartości są w cache
+        Integer i5 = 100;
+        Integer i6 = 100;
 
         System.out.println(i5 == i6);
     }

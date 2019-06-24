@@ -6,6 +6,7 @@ import java.io.Serializable;
 import java.lang.String;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.*;
 
 //importy statyczne zaczynają się od import static (nie może być static import)
 //mogą być wymieszane ze zwykłymi importami
@@ -21,3 +22,6 @@ public class SampleClass extends ArrayList implements Serializable, Collection {
 
     //klasa może być pusta - nie jest konieczne umieszczenie w niej czegokolwiek
 }
+
+//Nazwa klasy może się zaczynać od $ lub _
+class $ {}

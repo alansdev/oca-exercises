@@ -6,6 +6,7 @@ public class StaticFieldsMethods {
 
     private static String staticName = "Static";
 
+
     public static void main(String[] args) {
         System.out.println(staticName);
 
@@ -18,6 +19,5 @@ public class StaticFieldsMethods {
         //jest to dozwolone, choć niezbyt eleganckie - na egzaminie często się pojawia
         String staticName = sfm.staticName;
     }
-
 
 }

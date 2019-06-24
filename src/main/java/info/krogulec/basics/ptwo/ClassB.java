@@ -11,3 +11,4 @@ public class ClassB {
         return classA.getNemePublic();
     }
 }
+

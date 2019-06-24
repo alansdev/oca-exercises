@@ -23,7 +23,7 @@ or here
     /**
      * javadoc
      */
-    private Double aDouble;
+    private Double aDouble; /*one line*/
 
     private BigDecimal bigDecimal; //or here
 

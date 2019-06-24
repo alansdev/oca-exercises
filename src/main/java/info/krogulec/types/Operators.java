@@ -43,6 +43,10 @@ public class Operators {
         //short circuit
         boolean bool = a == b && a++ != b;
         System.out.println("Zmienna a po wyrażeniu: a == b && a++ != b : " + a);
+
+        //not short circuit
+        boolean bool2 = a == b & a++ != b;
+        System.out.println("Zmienna a po wyrażeniu: a == b && a++ != b : " + a);
     }
 
     private static void relationalOperatosrs() {
@@ -87,6 +91,12 @@ public class Operators {
 
         // Tu warto zwrócić uwagę na wynik dzielenia dwóch intów - został zaokrąglony do zera
         System.out.println("a /= b : " + (a /= b));
+
+        //typ wynikowy jest brany z pierwszej zmiennej
+        double c = 3.12;
+        int d = 4;
+
+        System.out.println(c*=d);
 
 
     }

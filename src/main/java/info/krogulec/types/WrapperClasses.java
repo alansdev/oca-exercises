@@ -26,6 +26,7 @@ public class WrapperClasses {
 
         Utils.breakingParts("Static parsing method");
         parsingMethods();
+
     }
 
     /**
@@ -52,6 +53,7 @@ public class WrapperClasses {
         //nie skompiluje się
         //Character d = new Character("D");
 
+        //nie korzystamy z wartości w cache
         Byte b = new Byte("222");
         Short s = new Short("1");
         Integer i = new Integer("12");

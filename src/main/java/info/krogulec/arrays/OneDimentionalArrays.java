@@ -24,6 +24,8 @@ public class OneDimentionalArrays {
         //tablica - podanie jednocześnie ilości elementów oraz nawiasów klamrowych uniemożliwia kompilację
 //        char [] chars = new char[2]{};
 
+        String [] sts = {"Jan", "Marek"};
+
         //inny typ inicjalizacji
         short shorts [] = new short[]{};
 
@@ -40,7 +42,7 @@ public class OneDimentionalArrays {
         //arraysSizes();
 
         Utils.breakingParts("Iterowanie po tablicach");
-        //iterating();
+        iterating();
 
 
     }
@@ -51,8 +53,8 @@ public class OneDimentionalArrays {
     private static void iterating() {
         int [] ints = new int[]{1,2,3,4,5,6,7,8};
 
-        for (int i = 0 ; i < 8 ; i++) {
-            System.out.println("Pętla for, idneks: " + i);
+        for (int i = 0 ; i < ints.length ; i++) {
+            System.out.println("Pętla for, idneks: " + ints[i]);
         }
 
         for(int i : ints){
@@ -61,13 +63,13 @@ public class OneDimentionalArrays {
 
         int i = 0;
         while (i < ints.length){
-            System.out.println("Pętla while, indeks: " + i);
+            System.out.println("Pętla while, indeks: " + ints[i]);
             i++;
         }
 
         i = 0;
         do{
-            System.out.println("Pętla do-while, indeks: " + i);
+            System.out.println("Pętla do-while, indeks: " + ints[i]);
             i++;
         }while (i < ints.length);
 
@@ -78,23 +80,23 @@ public class OneDimentionalArrays {
      */
     private static void arraysSizes() {
 
-        // ?
+        // 10
         int [] ints = new int[10];
         System.out.println(ints.length);
 
-        // ?
+        // 5
         int [] ints2 = new int[]{1,2,3,4,5};
         System.out.println(ints2.length);
 
-        // ?
+        // 50
         int [] ints3 = new int[ints.length*5];
         System.out.println(ints3.length);
 
-        // ?
+        // 5
         int [] ints4 = new int[]{0,1,2,3,ints2.length};
         System.out.println(ints4.length);
 
-        // ?
+        // 0
         int [] ints5 = new int[]{};
         System.out.println(ints5.length);
 

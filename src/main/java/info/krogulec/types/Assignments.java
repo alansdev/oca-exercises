@@ -9,7 +9,9 @@ public class Assignments {
          int anInt = 12344;
          long aLong = 12131234;
          float aFloat = 123f;
-         double aDouble = 3333.00d;
+         double aDouble = 3333.13d;
+
+         boolean aBool = false;
 
          //przypisanie węższego typu do szerszego jest dozwolone
         aShort = aByte;
@@ -23,6 +25,11 @@ public class Assignments {
 
         //odwrotne przypisanie tylko po castowaniu - ryzyko utraty danych
         aShort = (short)anInt;
+
+        aDouble = 12314.11;
+
         anInt = (int) aDouble;
+
+        System.out.println(anInt);
     }
 }

@@ -16,4 +16,6 @@ public class ClassA {
     protected String getNemeProtected(){
         return "some name protected";
     }
+
+
 }

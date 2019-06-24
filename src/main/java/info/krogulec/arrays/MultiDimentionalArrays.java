@@ -4,7 +4,19 @@ import info.krogulec.Utils;
 
 public class MultiDimentionalArrays {
 
+    private static String [] strangeInit [], surprise;
+    private static String [][] correctInit, expected;
+
     public static void main(String[] args) {
+
+        //powyższa deklaracja tworzy jedną i jedną dwuwymiarową tablicę
+        strangeInit = new String[][]{};
+        surprise = new String[]{};
+
+        //W tym przypadku deklaracja przewidywalnie daje dwie dwuwymiarowe tablice
+        correctInit = new String[1][];
+        expected = new String[2][];
+
         //tablica - inicjalizacja poprzez podanie pustej wartości w nawiasach
         int [][] ints = new int[][]{};
 
@@ -37,7 +49,7 @@ public class MultiDimentionalArrays {
     private static void iterating() {
         int [][] ints = new int[][]{{1,2,3},{9,8}};
 
-        for (int i = 0 ; i < 2 ; i++) {
+        for (int i = 0 ; i < ints.length ; i++) {
             for (int j = 0 ; j< ints[i].length ; j++){
                 System.out.println("Pętla for, element: " + ints[i][j]);
             }
@@ -76,11 +88,11 @@ public class MultiDimentionalArrays {
      */
     private static void arraysSizes() {
 
-        // ?
+        // 10
         int [][] ints = new int[10][];
         System.out.println(ints.length);
 
-        // ?
+        // 2
         int [][] ints2 = new int[][]{{1,2,3},{1,2}};
         System.out.println(ints2.length);
 
