@@ -10,7 +10,7 @@ public class BreakAndContinue {
         breakStatement();
 
         Utils.breakingParts("Continue statement");
-        continueStatement();
+        //continueStatement();
     }
 
     private static void continueStatement() {

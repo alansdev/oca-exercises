@@ -2,6 +2,10 @@ package info.krogulec.fieldsmethodsencapsulation;
 
 public class Constructors {
 
+    static {
+        System.out.println("Blok inicjalizacyjny static 1");
+    }
+
     {
         System.out.println("Blok inicjalizacyjny 1");
     }
@@ -13,6 +17,10 @@ public class Constructors {
      */
     public Constructors() {
         System.out.println("constructor");
+    }
+
+    static {
+        System.out.println("Blok inicjalizacyjny static 2");
     }
 
     /**
@@ -43,15 +51,19 @@ public class Constructors {
     //region Konstruktory mogą mieć różne modyfikatory dostępu
 
     protected Constructors(int param){
-        System.out.println("constructor");
+        System.out.println("constructor int");
     }
 
     Constructors(Character param){
-        System.out.println("constructor");
+        System.out.println("constructor char");
     }
 
     private Constructors(Double param){
         System.out.println("constructor");
+    }
+
+    private Constructors(byte b){
+        System.out.println("constructor byte");
     }
 
     //endregion
@@ -64,6 +76,10 @@ public class Constructors {
         Constructors c5 = new Constructors('A');
         Constructors c6 = new Constructors(1);
 
-        //TODO Jaki konstruktor został wywołany dla c4 i c6?
+        byte primByte = 3;
+
+        Constructors c7 = new Constructors(primByte);
+
+        //TODO Jaki konstruktor został wywołany dla c4, c5 i c6?
     }
 }

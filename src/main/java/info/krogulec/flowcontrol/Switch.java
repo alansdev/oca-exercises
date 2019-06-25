@@ -7,13 +7,49 @@ public class Switch {
     public static void main(String[] args) {
 
         Utils.breakingParts("Standardowe użycie switch");
-        standardSwitch();
+        //standardSwitch();
 
         Utils.breakingParts("Z pustymi przypadkami");
-        withEmptyCases();
+        //withEmptyCases();
 
         Utils.breakingParts("Brak słowa break i tego konsekwencje");
-        lackOfBreak();
+        //lackOfBreak();
+
+        Utils.breakingParts("Switch enums");
+        //switchEnums();
+
+        Utils.breakingParts("Switch enums - types");
+        //switchingTypes();
+
+    }
+
+    private static void switchingTypes() {
+        String b = "15";
+        final String caseD = "D";
+
+        switch(b){
+            //nie może być duplikowanych case'ów
+            case "A":
+                System.out.println("Ten");
+                break;
+            case caseD:
+                System.out.println("Fifteen");
+                break;
+            default:
+                System.out.println("Not ten or fifteen");
+        }
+    }
+
+    private static void switchEnums() {
+        Days d = Days.MON;
+
+        switch (d){
+            case MON:
+                System.out.println("MON");
+            case TUE:
+                break;
+            default: //też może być pusto
+        }
     }
 
     /**
@@ -56,21 +92,27 @@ public class Switch {
     private static void standardSwitch() {
 
         //musi być finalna zmienna
+        final int case15 = 15;
+
         int age = 20;
 
         switch (age){
-            case 15:
+            case case15:
                 System.out.println("age is 15");
-                break;
-            case 20:
-                System.out.println("age is 20");
-                System.out.println("another line is ok");
                 break;
             default:
                 System.out.println("age is not 15 nor 20");
+            case 50:
+                System.out.println("age is 20");
+                System.out.println("another line is ok");
+                break;
 
         }
 
 
     }
+}
+
+enum Days{
+    MON, TUE, WED
 }

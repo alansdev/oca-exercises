@@ -7,11 +7,9 @@ public class ObjectLifeCycle {
         this.movie = new Movie("Star wars"); //tutaj obiket jest tworzony
         movie = null; //tutaj zmienna movie już nie wskazuje na utworzony wcześniej obiket - nie jest on już dostępny
 
-        new Movie("Bloody diamond"); //ten obiekt nie ma referencji - również po utworzeniu nie jest dostępny
+        movie = new Movie("Bloody diamond"); //ten obiekt nie ma referencji - również po utworzeniu nie jest dostępny
 
         doSth();
-
-
     }
 
     public static void main(String[] args) throws InterruptedException {

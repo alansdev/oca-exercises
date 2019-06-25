@@ -5,6 +5,11 @@ public class WhileAndDoWhile {
     private static int age = 40;
 
     public static void main(String[] args) {
+
+        //Pętla while może być bez nawiasów
+        while (age < 50) System.out.println();
+            age++; //trzeba uważać na egzaminie na formatowanie - to wyrażenie jest poza pętlą
+
         //standardowa pętla while - warunek musi być spełniony, żeby wejść do pętli
         while (age < 50){
             System.out.println("not so old :)" + age);
@@ -12,7 +17,7 @@ public class WhileAndDoWhile {
         }
 
         while (age == 40){
-            //nie wejdzie do pętli bo wyrażenie jest true - musi być false, żeby pętla wykonała się przynajmniej raz
+            //nie wejdzie do pętli bo wyrażenie jest false - musi być true, żeby pętla wykonała się przynajmniej raz
             System.out.println("do something");
         }
 

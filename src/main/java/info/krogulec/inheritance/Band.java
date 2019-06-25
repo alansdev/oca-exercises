@@ -50,7 +50,7 @@ class JazzBand extends Band{
         System.out.println("Band " + getName() + " starts playing jazz");
     }
 
-    //overloading - nie moe być adnotacji override
+     //overloading - nie moe być adnotacji override
     protected void stopPlaying(String cause){
         System.out.println("Jazz band " + getName() +" stops playing, because " + cause);
     }

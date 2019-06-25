@@ -11,10 +11,10 @@ public class ForLoop {
     public static void main(String[] args) {
 
         Utils.breakingParts("Jednopoziomowa pętla for");
-        oneLevelForLoop();
+        //oneLevelForLoop();
 
         Utils.breakingParts("Dwupoziomowa pętla for");
-        twoLevelForLoop();
+        //twoLevelForLoop();
 
         Utils.breakingParts("Pętla foreach lub enhanced for loop");
         foreachLoop();
@@ -65,12 +65,28 @@ public class ForLoop {
 
         System.out.println("Przy próbie modyfikacji elementów nic się nie zmieniło: " + Arrays.toString(arr));
 
+        StringBuilder [] sbs = {new StringBuilder("one"), new StringBuilder("two")};
 
-        //nie można usuwać elementów kolekcji po której się iteruje - będzie wyjątek
-        for (String s : strings){
-            System.out.println(s);
-            strings.remove(s);
-        }
+//        for (StringBuilder sb : sbs){
+//            System.out.println("Array mutable elements: " + sb);
+//            sbs[0] = sb.append("mod");
+//        }
+//
+//        System.out.println(Arrays.toString(sbs));
+
+
+        //nie można modyfikować kolekcji/ tablicy po której się iteruje - będzie wyjątek
+//        for (String s : strings){
+//            System.out.println(s);
+//            strings.remove(s);
+//        }
+
+//        for (String s : strings){
+//            System.out.println(s);
+//            strings.add("new");
+//        }
+//
+//        System.out.println(strings);
 
     }
 
@@ -78,7 +94,10 @@ public class ForLoop {
 
         //standardowa wersja - ładnie sformatowana - na egzaminie może być różnie - np. bez nawiasów
         for (int hour = 0; hour < 24 ; hour++){
+            //if (hour == 13)continue;
             for(int min = 0; min < 60 ; min++){
+                if(hour == 13)break;
+                //if (hour == 13)++hour;
                 System.out.println("Hour: " + hour + " Minute: " + min);
             }
         }
@@ -93,23 +112,25 @@ public class ForLoop {
 
     private static void oneLevelForLoop() {
         //standardowa pętla
-        for(int i = 0; i < 10; i++){
-            System.out.println("Standardowa pętla for. Przypadek: " + i);
-        }
+        for(int i = 0; i < 10; i++)
+            System.out.println("Standardowa pętla for. Przypadek: " + i); //nie musi być nawiasów klamrowych
+
 
         //kilka zmiennych w bloku inicjalizacyjnym - muszą być tego samego typu
-        for(int i = 0, j = 1; i < 10; i++){
+        for(int i = 0, j ; i < 10; i++){
+            //jeżeli nie zainicjalizujemy zmiennej przed wykorzystaniem, kod się nie skompiluje
+            j = 0;
             System.out.println("Dwie zmienne w bloku inicjalizacyjnym. Przypadek: " + i + " druga zmienna: " + j);
         }
 
         //wyrażenie update - wykonuje się po przypadku - trzeba to pamiętać
-        for(int i = 0; i < 1; System.out.println("A")){
+        for(int i = 0; i < 1; System.out.println(i)){
             System.out.println("Standardowa pętla for. Przypadek: " + i);
             i++;
         }
 
         //wyrażenie update - może mieć kilka działań oddzielonych przecinkami
-        for(int i = 0; i < 1; System.out.println("A"), doSth()){
+        for(int i = 0, j = 2; i < 1 && j< 3; System.out.println(i), i++, doSth(), i = (i == 2)? 10 : 15){
             System.out.println("Dwa wyrażenia w sekcji update. Przypadek: " + i);
             i++;
         }
@@ -117,7 +138,7 @@ public class ForLoop {
         //brak nawiasów
         for(int i = 0; i < 10; i++)
             System.out.println("Brak nawiasów - wykonuje się tylko jedna linijka. Przypadek: " + i);
-        System.out.println("po pętli");
+            System.out.println("po pętli");
 
 
         //może nie być bloku update
@@ -126,7 +147,7 @@ public class ForLoop {
 //        }
 
 
-        //może nie być wyrażenia terminującego - pętla nieskończona
+//        //może nie być wyrażenia terminującego - pętla nieskończona
 //        for(int i = 0; ; i++){
 //            System.out.println("Brak wyrażenia terminującego - pętla nieskończona. Przypadek: " + i);
 //        }

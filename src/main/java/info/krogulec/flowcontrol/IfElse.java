@@ -61,6 +61,16 @@ public class IfElse {
 //        }
 
 
+        boolean adult = false;
+
+        //Sytuacja poprawna pod kątem kompilacji - wyrażenie musi zwrócić true lub false
+        if (adult = true){
+            System.out.println("is adult");
+        }
+
+        System.out.println(adult);
+
+
 
 
 

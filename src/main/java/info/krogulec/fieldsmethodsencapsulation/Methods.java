@@ -9,14 +9,18 @@ public class Methods {
     public static void main(String[] args) {
 
         /* Odwołanie do statycznej metody poprzez nazwę klasy i przypisanie wyjścia do zmiennej*/
-        String retFromStatic = Methods.staticMethodWithReturnValue();
-        System.out.println(retFromStatic);
+        //String retFromStatic = Methods.staticMethodWithReturnValue();
+        //System.out.println(retFromStatic);
 
         /* Odwołanie do statycznej metody poprzez nazwę klasy i brak przypisania*/
-        staticMethodWithReturnValue();
+        //staticMethodWithReturnValue();
 
         // Porównanie przekazania przez wartość i referencję
-        passByValueAndReference();
+        //passByValueAndReference();
+
+        Photo photo = new Photo();
+        System.out.println(photo.takePhoto(new Phone()));
+        System.out.println(photo.takePhoto(new Camera()));
 
     }
 
@@ -80,13 +84,13 @@ public class Methods {
     }
 
     //TODO Czy ta metoda się skompiluje?
-//    private void vararg2(String s, int... vararg1, Character... vararg2){
-//
-//    }
+    private void vararg2(String s, Character... vararg2){
+
+    }
 
     //TODO Napisać metodę, która się skompiluje, a return nie będzie ostatnnią linią
 
-    //Metody ptzeciążone - muszą być inne parametry wejściowe, ale tym typ zwracany nie jest konieczny taki sam
+    //Metody ptzeciążone - muszą być inne parametry wejściowe, ale typ zwracany nie jest konieczny taki sam
     public String overload(int i){return String.valueOf(i);}
     public String overload(String i){return i;}
 
@@ -114,6 +118,11 @@ class Photo{
 
     public String takePhoto(Phone phone){
         return "Taking photo with phone";
+    }
+
+    //Przeciążana metoda może mieć inny typ zwracany - musi być inny typ przekazywany
+    public int takePhoto(String sth){
+        return 10;
     }
 }
 
