@@ -18,7 +18,6 @@ public class ObjectLifeCycle {
         //nie gwarantuje wykonania GC i nie zaleca się jego używania
         System.gc();
 
-        //TODO Kod pokazujący finalizację bez jej bezpośredniego wywołania
     }
 
     private static void doSth(){

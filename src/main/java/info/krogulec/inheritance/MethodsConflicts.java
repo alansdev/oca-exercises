@@ -1,6 +1,11 @@
 package info.krogulec.inheritance;
 
-public class MethodsConflicts {
+public class MethodsConflicts implements Human, Alien {
+
+    @Override
+    public void canWalk() {
+
+    }
 }
 
 interface Human{
@@ -12,7 +17,7 @@ interface Human{
 }
 
 interface Alien{
-    void canWalk();
+    default void canWalk(){};
 
     //...
 }

@@ -5,8 +5,8 @@ package info.krogulec.exceptions;
  */
 public class NonTypical {
 
-    int getNumber(){
-        int retValue = 10;
+    Integer getNumber(){
+        Integer retValue = 10;
 
         try {
             String[] students = {"Jacek", "Placek"};

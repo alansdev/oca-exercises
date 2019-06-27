@@ -22,6 +22,14 @@ public class PeriodClass {
         Period sum = monthFifteen.plus(fourtyFiveDays);
         System.out.println(sum);
 
+        LocalDate may31 = LocalDate.of(2019, 5, 31);
+
+        System.out.println(may31.plus(monthFifteen));
+        LocalDate plus = LocalDate.of(2019, 5, 31).plus(Period.of(0,1,15));
+        System.out.println(plus);
+
+
+
 
     }
 }

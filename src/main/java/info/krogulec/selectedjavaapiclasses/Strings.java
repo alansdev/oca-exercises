@@ -9,15 +9,14 @@ class StringMethods{
     public static void main(String[] args) {
         String java = "JAVA";
 
-
-        System.out.println(java.charAt(0));
-        System.out.println(java.indexOf("G")); //jeśli czegoś nie znaleziono dostajemy -1
-        System.out.println(java.substring(1)); //od wskazanego znaku do końca
-        System.out.println(java.substring(1,3)); //trzeba pamiętać, że zawsze początek jest uwzględniony, a koniec nie
-        System.out.println(java.trim()); //obcina spacie z początku i końca
-        System.out.println(java.length()); //długość - sługość tablicy char [], która wewnętrznie przechowuje składniki pola
-        System.out.println(java.startsWith("J"));
-        System.out.println(java.endsWith("J"));
+        System.out.println(java.charAt(0)); //J
+        System.out.println(java.indexOf("G")); //-1   //jeśli czegoś nie znaleziono dostajemy -1
+        System.out.println(java.substring(1)); //AVA //od wskazanego znaku do końca
+        System.out.println(java.substring(1,3)); //AV //trzeba pamiętać, że zawsze początek jest uwzględniony, a koniec nie
+        System.out.println(java.trim()); //JAVA //obcina spacie z początku i końca
+        System.out.println(java.length()); //4 //długość - sługość tablicy char [], która wewnętrznie przechowuje składniki pola
+        System.out.println(java.startsWith("J")); //true
+        System.out.println(java.endsWith("J")); //false
 
         //Warto zwrócić uwagę, że wyjściowa zmienna się nie zmieniła
         System.out.println(java);
@@ -33,7 +32,7 @@ class CountingObjects{
         String dog2 = "dog"; //nie jest tworzony nowy obiket - jest zabierany z publi
         String dog3 = "dog";
         String dog4 = new String("dog");
-        String dog5 = String.valueOf("dog");
+        String dog5 = String.valueOf("dog"); //nie tworzy nowego obiektu
 
         Utils.breakingParts("Porównanie po equals");
         System.out.println("ddog.equals(dog2): " + dog.equals(dog2));

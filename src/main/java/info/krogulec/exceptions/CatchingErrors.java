@@ -15,5 +15,6 @@ public class CatchingErrors {
 
     private static void prepareStackOverflow() {
         //TODO Jak wywołać stack overflow error?
+        //prepareStackOverflow();
     }
 }

@@ -50,7 +50,7 @@ class JazzBand extends Band{
         System.out.println("Band " + getName() + " starts playing jazz");
     }
 
-     //overloading - nie moe być adnotacji override
+    //overloading - nie moe być adnotacji override
     protected void stopPlaying(String cause){
         System.out.println("Jazz band " + getName() +" stops playing, because " + cause);
     }
@@ -74,8 +74,8 @@ class Festival{
         jazzBand.stopPlaying();
 
         //TODO jakie będą wyniki poniższych rzutowań?
-//        Band c1 = (Band)jazzBand;
-//        RockBand c2 = (RockBand)jazzBand;
-//        JazzBand c3 = (JazzBand)band;
+        Band c1 = (Band)jazzBand;
+        RockBand c2 = (RockBand)jazzBand;
+        JazzBand c3 = (JazzBand)band;
     }
 }

@@ -6,6 +6,9 @@ package info.krogulec.inheritance;
 public interface CanSwimm {
     void swimm();
 
+    //default musi mieć implementację
+    //default void sth();
+
     //Pola domyśnie public static final
     static final String SWIMMER = "swimmer";
 
@@ -31,6 +34,11 @@ class Person implements CanSwimm{
         canSwimm.swimm();
         canSwimm.place();
         System.out.println(CanSwimm.prepareSwimmer("Jan"));
+    }
+
+    @Override
+    public void place(){
+
     }
 
     @Override

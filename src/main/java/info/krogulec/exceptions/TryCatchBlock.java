@@ -7,7 +7,7 @@ public class TryCatchBlock {
     //TODO Czy poniższe metody się skompilują?
 //    void method(){
 //        try{}
-//        catch (Error e){}
+//        catch (Error error){}
 //    }
 //
 //    void method2(){
@@ -26,7 +26,8 @@ public class TryCatchBlock {
 //    }
 //
 //    void method5(){
-//        try{}
+//        try{
+//        }
 //        catch (IOException e){}
 //    }
 }

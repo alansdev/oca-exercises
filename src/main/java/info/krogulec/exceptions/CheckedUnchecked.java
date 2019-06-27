@@ -1,5 +1,7 @@
 package info.krogulec.exceptions;
 
+import java.io.IOException;
+
 public class CheckedUnchecked {
 
     public static void main(String[] args) {

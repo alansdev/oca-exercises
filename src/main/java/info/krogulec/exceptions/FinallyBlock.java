@@ -19,9 +19,9 @@ public class FinallyBlock {
 
             //return nie uchroni przed wejściem do finally
             return;
-        } catch (IOException e){
+        }catch (IOException e){
             //wyjątkki bardziej ogólne muszą być po szczególnych
-        }finally {
+        } finally {
             System.out.println("Finally block...");
                 if (reader != null) {
                     try {

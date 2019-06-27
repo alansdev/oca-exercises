@@ -37,6 +37,8 @@ class Horror extends Movie{
     }
 }
 
+class Comedy extends Movie{}
+
 class FilmsConsumer {
     public static void main(String[] args) {
 
@@ -66,10 +68,12 @@ class FilmsConsumer {
         Horror horror = new Horror("From dusk till down", Duration.ofMinutes(130), 6);
         Movie movieHorror = new Horror("The Shining", Duration.ofMinutes(140), 7);
         Movie movie = new Movie();
+        Movie movieComedy = new Comedy();
 
-        Movie movie1 = (Movie)movieHorror;
+        //Movie movie1 = (Movie)movieHorror;
         //Movie movie2 = (Movie)horror;
         //Horror horror1 = (Horror)movieHorror;
+        //Horror horrorCmd = (Horror) movieComedy;
         //Horror horror2 = (Horror)movie;
     }
 }
